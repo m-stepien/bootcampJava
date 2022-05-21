@@ -5,6 +5,10 @@ public class Main {
         System.out.println("jadslnasdsa njskan saf ");
     }
 
+    public void funkcja2(int a){
+        System.out.println("jadslnasdsa njskan saf 2");
+    }
+
     //zadanie 1
     public static int[] evenOdd(int[] nums) {
         int hold;
