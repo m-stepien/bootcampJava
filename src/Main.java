@@ -66,6 +66,7 @@ public int[] squareUp(int n) {
                 }
             }
         }
+
         return nums;
     }
 
@@ -85,6 +86,9 @@ public int[] squareUp(int n) {
         return str2;
     }
 
+    public void all(){
+        System.out.println("HELOOOOOOOOO");
+    }
 
     //zad6
     public boolean xyzMiddle(String str) {
