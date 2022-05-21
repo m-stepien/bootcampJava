@@ -1,6 +1,10 @@
 public class Main {
     public static void main(String[] args) {
     }
+    public void funkcja(int a){
+        System.out.println("jadslnasdsa njskan saf ");
+    }
+
     //zadanie 1
     public static int[] evenOdd(int[] nums) {
         int hold;
