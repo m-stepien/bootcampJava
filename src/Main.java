@@ -1,9 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-    str();
     }
     //zadanie 1
-    public int[] evenOdd(int[] nums) {
+    public static int[] evenOdd(int[] nums) {
         int hold;
         for(int i=0;i<nums.length;i++){
             if(nums[i]%2==1){
@@ -15,13 +14,11 @@ public class Main {
                     }
                 }
             }
-
-
         }
         return nums;
     }
 //zad 2
-    public int[] zeroFront(int[] nums) {
+    public static int[] zeroFront(int[] nums) {
         int hold;
         for(int i =0;i<nums.length;i++){
             if(nums[i]==0){
@@ -33,13 +30,12 @@ public class Main {
                     }
                 }
             }
-
         }
         return nums;
     }
 
 //zad 3
-public int[] squareUp(int n) {
+public static int[] squareUp(int n) {
     int[] arr =new int[n*n];
     for(int i=0;i<n;i++){
         for(int j=n;j>0;j--){
@@ -48,51 +44,42 @@ public int[] squareUp(int n) {
             }
             else arr[i+n-j]=0;
         }
-
     }
-
-
-    //zad 4
-    public int[] fix45(int[] nums) {
-        int hold;
-        for(int i =0;i<nums.length;i++){
-            if(nums[i]==5){
-                for(int j =0;j<nums.length;j++){
-                    if(nums[j]==4){
-                        hold=nums[j+1];
-                        nums[j+1]=nums[i];
-                        nums[i]=hold;
-                    }
+    return arr;
+    }
+//zad 4
+public static int[] fix45(int[] nums) {
+    int hold;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] == 5) {
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[j] == 4) {
+                    hold = nums[j + 1];
+                    nums[j + 1] = nums[i];
+                    nums[i] = hold;
                 }
             }
         }
-
-        return nums;
     }
-
-
-    return arr;}
+    return nums;
+}
     //zad 5
-    public String repeatEnd(String str, int n) {
+    public static String repeatEnd(String str, int n) {
         char[]  stringAsChar=str.toCharArray();
         char[] newCharArray = new char[n*n];
         for(int j=0;j<n;j++){
             for(int i=stringAsChar.length-n;i<stringAsChar.length;i++){
                 newCharArray[i-(stringAsChar.length-n)+j*n]=stringAsChar[i];
-
             }
         }
         String str2=new String(newCharArray);
         return str2;
     }
-
     public void all(){
         System.out.println("HELOOOOOOOOO");
     }
-
     //zad6
-    public boolean xyzMiddle(String str) {
-
+    public static boolean xyzMiddle(String str) {
         int start=0;
         while(str.indexOf("xyz", start)!=-1){
             int num_left = str.indexOf("xyz",start);
@@ -106,7 +93,7 @@ public int[] squareUp(int n) {
         return false;
     }
     //zad7
-    public String mixString(String a, String b) {
+    public static String mixString(String a, String b) {
         char[] newCharArray = new char[a.length()+b.length()];
         char[] aChar=a.toCharArray();
         char[] bChar=b.toCharArray();
@@ -121,7 +108,6 @@ public int[] squareUp(int n) {
         while(i<aChar.length){
             newCharArray[i+j]=aChar[i];
             i++;
-
         }
         while(j<bChar.length){
             newCharArray[j+i]=bChar[j];
@@ -131,14 +117,14 @@ public int[] squareUp(int n) {
         return str2;
     }
     //zad 8
-    public boolean closeFar(int a, int b, int c) {
+    public static boolean closeFar(int a, int b, int c) {
         if(((Math.abs(a-b)<=1||Math.abs(a-c)<=1)&&(Math.abs(a-b)>=2||Math.abs(a-c)>=2))&&(Math.abs(b-c)>=2)){
             return true;
         }
         return false;
     }
     //zad9
-    public int luckySum(int a, int b, int c) {
+    public static int luckySum(int a, int b, int c) {
         int sum=0;
         if(a==13){
             if(b!=13&&a!=13)sum+=c;
@@ -155,7 +141,7 @@ public int[] squareUp(int n) {
         return sum;
     }
     //zad10
-    public int array667(int[] nums) {
+    public static int array667(int[] nums) {
         boolean flag=false;
         int count = 0;
         for(int num:nums){
@@ -168,8 +154,4 @@ public int[] squareUp(int n) {
         }
         return count;
     }
-
-
-
-
 }
